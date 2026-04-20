@@ -123,7 +123,7 @@ Pastikan sistem Anda memenuhi requirement berikut:
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/Alwi31/gawebang-project
+git clone <https://github.com/Alwi31/gawebang-project.git>
 cd gawebang-project
 ```
 
