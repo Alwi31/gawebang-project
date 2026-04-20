@@ -1,5 +1,5 @@
 <div align=center>
-    <b>Gawebang Project 🚀</b>
+    <h1><b>Gawebang Project 🚀</b></h1>
 </div>
 
 <div align="center">
@@ -11,7 +11,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
-**[Deskripsi](#deskripsi-proyek) • [Fitur](#fitur-utama) • [Tech Stack](#tech-stack) • [Instalasi](#instalasi) • [Setup Database](#setup-database)**
+**[📖 Dokumentasi](#-dokumentasi) • [🚀 Quick Start](#-quick-start) • [📋 Fitur](#-fitur-utama) • [🛠️ Tech Stack](#-tech-stack) • [Instalasi](#-instalasi) • [⚙️ Setup Database](#-setup-database)**
 
 </div>
 
