@@ -2,14 +2,14 @@
 
 <div align="center">
 
-**Platform Kolaborasi Profesional untuk Project Development**
+**Freelance Marketplace Platform - Connecting Clients & Freelancers**
 
 [![Laravel](https://img.shields.io/badge/Laravel-11.0-FF2D20?style=flat-square&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=flat-square&logo=php&logoColor=white)](https://www.php.net)
 [![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
-[📖 Dokumentasi](#-dokumentasi) • [🚀 Quick Start](#-quick-start) • [📋 Fitur](#-fitur-utama) • [🛠️ Tech Stack](#-tech-stack)
+**[Deskripsi](#deskripsi-proyek) • [Fitur](#fitur-utama) • [Tech Stack](#tech-stack) • [Instalasi](#instalasi) • [Setup Database](#setup-database)**
 
 </div>
 
@@ -17,51 +17,56 @@
 
 ## 📝 Deskripsi Proyek
 
-**Gawebang Project** adalah platform kolaborasi yang dirancang untuk memfasilitasi pengembangan proyek secara profesional dan efisien. Platform ini menyediakan sistem manajemen proyek, pengelolaan tim, tracking tools, dan sistem wallet terintegrasi untuk mengelola keuangan proyek dengan mudah.
+**Gawebang Project** adalah platform marketplace freelance yang menghubungkan klien dengan freelancer berkualitas untuk mengerjakan berbagai proyek secara online. Platform ini menyediakan ekosistem lengkap untuk mengelola project, melakukan bidding, komunikasi real-time, dan manajemen keuangan.
 
-Dibangun dengan **Laravel 11** sebagai backend framework yang robust, **Tailwind CSS** untuk UI yang modern, dan **MySQL** untuk database yang reliable.
+Dibangun dengan **Laravel 11**, **Tailwind CSS**, dan **MySQL** untuk memberikan pengalaman yang smooth, aman, dan scalable bagi semua pengguna.
 
 ---
 
 ## ✨ Fitur Utama
 
-### 👥 User Management
+### � Sistem Autentikasi & Role Management
 
-- ✅ Registrasi dan login pengguna
-- ✅ Profil pengguna yang dapat dikustomisasi
-- ✅ Sistem role & permission berbasis Spatie Laravel Permission
-- ✅ Password reset dan email verification
+- ✅ Registrasi dan login user yang aman
+- ✅ Role-based access control: **Client** dan **Freelancer**
+- ✅ Profil user yang dapat dikustomisasi
+- ✅ Email verification dan password recovery
 
-### 📁 Project Management
+### 📋 Project Management
 
-- ✅ Membuat dan mengelola proyek dengan deskripsi detail
-- ✅ Set skill level requirement untuk project
-- ✅ Assign multiple tools dan teknologi ke project
-- ✅ Project status tracking
+- ✅ **Client** dapat membuat, mengedit, dan menghapus project
+- ✅ Detail project lengkap: deskripsi, budget, category, skill requirements
+- ✅ Project status tracking: draft, active, ongoing, completed
+- ✅ Kategori project untuk filtering dan search
+- ✅ Skill level requirements untuk freelancer
 
-### 🛠️ Tools & Technologies
+### 💼 Bidding System (Penawaran)
 
-- ✅ Katalog tools/teknologi yang lengkap
-- ✅ Tagging sistem untuk kategorisasi tools
-- ✅ Quick access untuk reusable tools
+- ✅ **Freelancer** dapat mengajukan penawaran (bid) ke project yang tersedia
+- ✅ Proposal dengan message/pitch untuk freelancer
+- ✅ Status bidding: waiting, accepted, rejected, hired
+- ✅ Track all bidding history untuk setiap project
 
-### 💼 Aplikasi & Tim
+### 🎯 Dashboard & User Panel
 
-- ✅ Pengguna dapat apply ke project yang tersedia
-- ✅ Kelola aplikasi dan status approval
-- ✅ Project team management
+- ✅ **Client Dashboard**: overview project, bidding status, dan statistics
+- ✅ **Freelancer Dashboard**: available projects, bidding history, earnings
+- ✅ Activity log dan notification system
+- ✅ Profile management untuk kedua role
 
-### 💰 Wallet System
+### 💰 Wallet & Payment System
 
-- ✅ Virtual wallet untuk setiap pengguna
+- ✅ Virtual wallet untuk setiap user
 - ✅ Track semua transaksi keuangan
-- ✅ History transaksi yang detail
+- ✅ Transaction history yang detail
 - ✅ Secure payment processing
 
-### 📊 Kategori Konten
+### 🏷️ Kategori & Tools Management
 
-- ✅ Sistem kategorisasi proyek dan tools
-- ✅ Filtering dan searching berdasarkan kategori
+- ✅ Manajemen kategori project yang lengkap
+- ✅ Skill/Tools management (teknologi yang digunakan)
+- ✅ Filter dan search berdasarkan category dan tools
+- ✅ Tagging system untuk reusable tools
 
 ---
 
@@ -72,9 +77,9 @@ Dibangun dengan **Laravel 11** sebagai backend framework yang robust, **Tailwind
 - **Framework**: Laravel 11
 - **Language**: PHP 8.3+
 - **Database**: MySQL 5.7+
-- **Permission**: Spatie Laravel Permission v6.24
+- **Authentication**: Laravel Breeze
+- **Permission**: Spatie Laravel Permission
 - **Queue**: Database Driver
-- **Cache**: Database Driver
 
 ### Frontend
 
@@ -83,39 +88,42 @@ Dibangun dengan **Laravel 11** sebagai backend framework yang robust, **Tailwind
 - **JavaScript**: Alpine JS 3.4
 - **HTTP Client**: Axios
 
-### Development Tools
+### Development & Testing
 
 - **Testing**: PHPUnit 10.5
 - **Code Quality**: Laravel Pint
 - **Debugging**: Laravel Ignition
-- **Faker**: Faker PHP (untuk testing data)
-
-### Additional
-
-- **Authentication**: Laravel Breeze
-- **Artisan CLI**: Laravel Tinker
+- **Faker**: Faker PHP (test data)
 
 ---
 
-## 📋 Prasyarat
+## 📋 Requirements
 
-Sebelum memulai, pastikan sistem Anda sudah memiliki:
+Pastikan sistem Anda memenuhi requirement berikut:
 
-- **PHP** >= 8.3
-- **Composer** (untuk dependency management PHP)
-- **Node.js** >= 16 dan **NPM** (untuk build frontend)
-- **MySQL** >= 5.7
-- **Git** (opsional, untuk version control)
-- **Code Editor** (VS Code, PhpStorm, dll)
+| Requirement  | Version |
+| ------------ | ------- |
+| **PHP**      | >= 8.3  |
+| **MySQL**    | >= 5.7  |
+| **Node.js**  | >= 16   |
+| **Composer** | Latest  |
+| **NPM**      | Latest  |
+
+**Software yang diperlukan:**
+
+- Git (untuk version control)
+- Composer (untuk PHP dependencies)
+- Node.js & NPM (untuk frontend build)
+- XAMPP/Laragon/MAMP (untuk MySQL & PHP server)
 
 ---
 
-## 🚀 Panduan Instalasi
+## 🚀 Instalasi
 
 ### Step 1: Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Alwi31/gawebang-project
 cd gawebang-project
 ```
 
@@ -125,21 +133,21 @@ cd gawebang-project
 composer install
 ```
 
-### Step 3: Install Node Dependencies
+### Step 3: Install Frontend Dependencies
 
 ```bash
 npm install
 ```
 
-### Step 4: Setup Environment Configuration
+### Step 4: Setup Environment File
 
-Copy file `.env.example` menjadi `.env`:
+Copy `.env.example` ke `.env`:
 
 ```bash
 cp .env.example .env
 ```
 
-Jika belum ada `.env.example`, gunakan template di bagian [Konfigurasi Environment](#⚙️-konfigurasi-environment-env).
+Atau buat `.env` baru dengan konfigurasi berikut.
 
 ### Step 5: Generate Application Key
 
@@ -147,51 +155,33 @@ Jika belum ada `.env.example`, gunakan template di bagian [Konfigurasi Environme
 php artisan key:generate
 ```
 
-### Step 6: Setup Database
-
-#### Option A: Import dari File SQL (jika tersedia)
-
-1. **Buka phpMyAdmin** (di `http://localhost/phpmyadmin`)
-2. **Buat database baru** dengan nama `gawebang_project`
-3. **Klik pada database** yang baru dibuat
-4. **Klik tab "Import"**
-5. **Browse file** SQL dari folder `database/sql/` (jika ada)
-6. **Klik tombol "Go"** untuk import
-7. **Tunggu proses selesai**
-
-#### Option B: Menggunakan Migration (Recommended)
-
-```bash
-php artisan migrate
-```
-
-Jika ingin menambahkan data dummy untuk testing:
-
-```bash
-php artisan db:seed
-```
+### Step 6: Setup Database (lihat bagian Setup Database)
 
 ---
 
-## ⚙️ Konfigurasi Environment (.env)
+## 🔐 Setup Environment (.env)
 
-Edit file `.env` di root project dan sesuaikan konfigurasi berikut:
+Edit file `.env` dan sesuaikan konfigurasi berikut:
+
+### Database Configuration
 
 ```env
-# App Configuration
-APP_NAME=GawebangProject
-APP_ENV=local
-APP_DEBUG=true
-APP_URL=http://localhost:8000
-APP_TIMEZONE=UTC
-
-# Database Configuration
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=gawebang_project
 DB_USERNAME=root
-DB_PASSWORD=              # Kosongkan jika password default MySQL kosong
+DB_PASSWORD=
+```
+
+### Application Configuration
+
+```env
+APP_NAME=GawebangProject
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+APP_TIMEZONE=UTC
 
 # Session Configuration
 SESSION_DRIVER=database
@@ -199,268 +189,243 @@ SESSION_LIFETIME=120
 
 # Cache Configuration
 CACHE_STORE=database
-CACHE_PREFIX=
 
 # Queue Configuration
 QUEUE_CONNECTION=database
 
-# Mail Configuration (opsional)
+# Mail Configuration
 MAIL_MAILER=log
-MAIL_HOST=smtp.mailtrap.io
-MAIL_PORT=587
-MAIL_USERNAME=your_username
-MAIL_PASSWORD=your_password
-MAIL_FROM_ADDRESS=noreply@gawebang.com
-MAIL_FROM_NAME="Gawebang Project"
-
-# Broadcast
-BROADCAST_CONNECTION=log
-
-# Filesystem
-FILESYSTEM_DISK=local
 ```
 
 **⚠️ Tips Penting:**
 
-- Set `APP_DEBUG=false` untuk production
-- Gunakan file `.env.production` terpisah untuk konfigurasi production
-- **Jangan commit file `.env` ke repository** (sudah di `.gitignore`)
-- Selalu gunakan environment variable untuk secret key
+- Untuk production: set `APP_DEBUG=false`
+- Jangan commit `.env` ke repository (sudah di `.gitignore`)
+- Gunakan `.env.production` untuk konfigurasi production
+- Setup email SMTP untuk production (bukan `log`)
 
 ---
 
-## 🔧 Menjalankan Project
+## 🗄️ Setup Database
 
-### Mode Development (Hot Reload)
+### Option A: Menggunakan Migration (Recommended)
 
-**Terminal 1 - Jalankan PHP Server:**
+**Jalankan semua migration:**
+
+```bash
+php artisan migrate
+```
+
+**Tambahkan data dummy (opsional):**
+
+```bash
+php artisan db:seed
+```
+
+Database akan otomatis dibuat dengan semua tabel yang diperlukan.
+
+### Option B: Import Database dari SQL File
+
+Jika ada file backup database SQL:
+
+1. **Buka phpMyAdmin** di `http://localhost/phpmyadmin`
+2. **Buat database baru** dengan nama `gawebang_project`
+3. **Klik database** yang baru dibuat
+4. **Klik tab "Import"**
+5. **Browse & pilih file** `.sql` dari folder project
+6. **Klik tombol "Go"** untuk memulai import
+7. **Tunggu proses selesai**
+
+### Tabel Database yang Dibuat
+
+```
+users                    → User data (Client & Freelancer)
+categories               → Kategori project
+tools                    → Skill/Technology tools
+projects                 → Project dari client
+project_tools            → Relation antara project dan tools
+project_applicants       → Bidding data dari freelancer
+wallets                  → Virtual wallet user
+wallet_transactions      → Transaction history
+```
+
+---
+
+## ▶️ Menjalankan Project
+
+### Development Mode
+
+**Terminal 1 - Jalankan Laravel Server:**
 
 ```bash
 php artisan serve
 ```
 
-Server akan berjalan di `http://localhost:8000`
+Akses di `http://localhost:8000`
 
-**Terminal 2 - Jalankan Vite Development Server:**
+**Terminal 2 - Jalankan Vite Dev Server (di terminal terpisah):**
 
 ```bash
 npm run dev
 ```
 
-Vite akan berjalan di `http://localhost:5173`
+Vite berjalan di `http://localhost:5173` untuk hot reload.
 
-Akses aplikasi di browser: **http://localhost:8000**
-
-### Build untuk Production
+### Production Build
 
 ```bash
-# Build frontend assets
 npm run build
-
-# Run migrations di environment production
-php artisan migrate --env=production
-
-# Clear all caches
-php artisan cache:clear
-php artisan config:clear
-php artisan route:clear
-php artisan view:clear
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
 ```
 
 ---
 
-## 📁 Struktur Folder
+## 📁 Struktur Folder Penting
 
 ```
-gawebang-project/
-├── app/
-│   ├── Http/
-│   │   ├── Controllers/          # Request handlers & business logic
-│   │   └── Requests/             # Form validation rules
-│   ├── Models/                   # Database Eloquent models
-│   │   ├── User.php
-│   │   ├── Project.php
-│   │   ├── Category.php
-│   │   ├── Tool.php
-│   │   ├── ProjectApplicant.php
-│   │   ├── Wallet.php
-│   │   ├── WalletTransaction.php
-│   │   └── ProjectTool.php
-│   ├── Observers/                # Model event observers
-│   └── Providers/                # Service providers
+app/
+├── Http/
+│   ├── Controllers/
+│   │   ├── DashboardController.php      # Dashboard untuk user
+│   │   ├── ProjectController.php        # CRUD project
+│   │   ├── ProjectApplicantController.php # Bidding system
+│   │   ├── ProfileController.php        # User profile
+│   │   ├── WalletController.php         # Wallet management
+│   │   ├── CategoryController.php       # Category management
+│   │   └── ToolController.php           # Tool management
+│   └── Requests/                        # Form validation
 │
-├── bootstrap/                    # Framework bootstrap files
-├── config/                       # Configuration files
-│   ├── app.php                   # Application config
-│   ├── auth.php                  # Authentication config
-│   ├── database.php              # Database config
-│   ├── permission.php            # Permission/role config
-│   └── ...
+├── Models/
+│   ├── User.php                         # User model (Client & Freelancer)
+│   ├── Project.php                      # Project model
+│   ├── ProjectApplicant.php             # Bidding model
+│   ├── Category.php
+│   ├── Tool.php
+│   ├── Wallet.php
+│   └── WalletTransaction.php
 │
-├── database/
-│   ├── migrations/               # Database schema migrations
-│   │   └── *_create_*_table.php
-│   ├── seeders/                  # Database seeders
-│   │   ├── DatabaseSeeder.php
-│   │   └── RolePermissionSeeder.php
-│   ├── factories/                # Model factories for testing
-│   └── sql/                      # SQL backup files (jika ada)
-│
-├── public/                       # Web server root directory
-│   ├── assets/                   # Static assets
-│   │   ├── icons/
-│   │   ├── logos/
-│   │   ├── photos/
-│   │   └── thumbnails/
-│   ├── build/                    # Compiled assets from Vite
-│   │   └── manifest.json
-│   ├── css/                      # Compiled CSS output
-│   └── index.php                 # Entry point
-│
-├── resources/
-│   ├── js/                       # Frontend JavaScript
-│   │   ├── app.js
-│   │   └── bootstrap.js
-│   ├── css/                      # Source CSS files
-│   │   └── app.css
-│   └── views/                    # Blade templates
-│       └── ...
-│
-├── routes/
-│   ├── web.php                   # Web routes
-│   ├── auth.php                  # Authentication routes
-│   └── console.php               # Console commands
-│
-├── storage/                      # Application storage
-│   ├── app/                      # File uploads
-│   ├── framework/                # Framework generated files
-│   └── logs/                     # Application logs
-│
-├── tests/                        # Unit & Feature tests
-│   ├── TestCase.php
-│   ├── Feature/
-│   └── Unit/
-│
-├── vendor/                       # Composer dependencies
-├── node_modules/                 # NPM dependencies
-│
-├── .env                          # Environment variables (local)
-├── .env.example                  # Environment template
-├── composer.json                 # PHP dependencies definition
-├── package.json                  # Node dependencies definition
-├── vite.config.js                # Vite bundler configuration
-├── tailwind.config.js            # Tailwind CSS configuration
-├── phpunit.xml                   # PHPUnit test configuration
-├── artisan                       # Laravel CLI executable
-└── README.md                     # This file
+└── Providers/                           # Service providers
+
+database/
+├── migrations/                          # Schema migrations
+├── seeders/                             # Database seeders
+└── sql/                                 # SQL backup files (jika ada)
+
+resources/
+├── views/                               # Blade templates
+├── js/                                  # JavaScript files
+└── css/                                 # CSS stylesheets
+
+routes/
+├── web.php                              # Web routes
+└── auth.php                             # Auth routes
+
+docs/
+└── images/                              # Screenshot & documentation images
+
+public/
+└── assets/                              # Static assets (images, icons, etc)
 ```
 
 ---
 
 ## 📸 Screenshots
 
-Berikut adalah area untuk menampilkan UI screenshots project Anda:
+Letakkan screenshot UI Anda di folder `docs/images/` dan referensikan di bawah ini.
 
-### 🏠 Dashboard
+### Dashboard Client
 
-![Dashboard Placeholder](docs/images/dashboard.png)
-_Halaman utama dengan overview statistik project_
+![Client Dashboard Placeholder](docs/images/dashboard.png)
+_Halaman dashboard untuk client mengelola project dan bidding_
 
-### 📊 Project Management
+### Project Listing
 
-![Project Management Placeholder](docs/images/project.png)
-_Interface untuk membuat dan mengelola projects serta assign tools_
+![Project Listing Placeholder](docs/images/project.png)
+_Halaman listing project yang tersedia untuk freelancer_
 
-### 💰 Wallet System
+### Freelancer Bidding
+
+![Bidding System Placeholder](docs/images/bidding.png)
+_Interface untuk freelancer mengajukan bid/proposal_
+
+### Wallet Management
 
 ![Wallet System Placeholder](docs/images/wallet.png)
-_Sistem wallet dengan history transaksi dan balance management_
+_Panel wallet dengan transaction history_
 
-### 👤 User Profile
+### User Profile
 
 ![User Profile Placeholder](docs/images/profile.png)
-_Profil pengguna dengan role, permissions, dan informasi personal_
-
-### 🔐 Authentication
-
-![Auth Placeholder](docs/images/authentication.png)
-_Halaman login dan register dengan validasi form_
+_Profil user dengan informasi personal dan rating_
 
 ---
 
-## 📚 Database Architecture
+### 📸 Cara Menambahkan Screenshot
 
-### Entity Relationship Diagram
+1. **Ambil screenshot** dari aplikasi Anda
+2. **Simpan ke folder**: `docs/images/`
+3. **Gunakan nama file** yang deskriptif (gunakan lowercase, hyphen-separated)
+4. **Update README** dengan path lokal seperti contoh di atas
 
-```
-User
-  ├─── 1:N ─── Project (as creator)
-  ├─── M:N ─── ProjectApplicant (applied projects)
-  ├─── 1:N ─── Wallet
-  └─── 1:N ─── WalletTransaction
+**Rekomendasi:**
 
-Project
-  ├─── M:N ─── Tool (via ProjectTool)
-  ├─── 1:N ─── ProjectTool
-  ├─── 1:N ─── ProjectApplicant
-  ├─── N:1 ─── Category
-  └─── N:1 ─── User (creator)
+- Ukuran: 1200x600px atau 800x600px
+- Format: PNG atau JPG
+- File size: < 500KB per image
+- Contoh nama: `dashboard.png`, `project.png`, `bidding.png`
 
-Tool
-  ├─── M:N ─── Project
-  ├─── N:1 ─── Category
-  └─── 1:N ─── ProjectTool
+**Tools untuk capture screenshot:**
 
-Category
-  ├─── 1:N ─── Project
-  └─── 1:N ─── Tool
+- Windows: ShareX (gratis), Snagit, Print Screen + Paint
+- Mac: Screenshot built-in, Snagit
+- Online: Placeholder images dari placeholder.com
 
-Wallet
-  ├─── N:1 ─── User
-  └─── 1:N ─── WalletTransaction
+---
 
-WalletTransaction
-  └─── N:1 ─── Wallet
-```
+## � Fitur & Improvement Rencana
 
-### Permission System
+### Current Features ✅
 
-Project menggunakan **Spatie Laravel Permission** dengan struktur:
+- ✅ User authentication dengan role management
+- ✅ Project CRUD operations
+- ✅ Bidding system untuk freelancer
+- ✅ Dashboard untuk client & freelancer
+- ✅ Wallet & payment system
+- ✅ Category & tools management
+- ✅ Profile management
 
-```
-Roles:
-  - Admin           → Full access ke semua fitur
-  - Project Manager → Mengelola project dan team
-  - User            → Membuat project dan apply ke project lain
+### Future Improvements 🔮
 
-Permissions:
-  - view-projects
-  - create-project
-  - edit-project
-  - delete-project
-  - manage-tools
-  - manage-wallet
-  - approve-applicant
-  - ... dll
-```
+- 🔄 Real-time notification system
+- 📱 Mobile app (React Native/Flutter)
+- ⭐ Rating & review system untuk freelancer
+- 💬 Chat messaging system
+- 📊 Advanced analytics dashboard
+- 🔍 Recommendation engine
+- 🌍 Multi-language support
+- 📱 Push notifications
+- 🔒 Two-factor authentication
+- 📈 Advanced reporting & analytics
 
 ---
 
 ## 🧪 Testing
 
-### Jalankan Unit Test
+### Jalankan Unit Tests
 
 ```bash
 php artisan test
 ```
 
-### Jalankan Test dengan Coverage Report
+### Jalankan Test dengan Coverage
 
 ```bash
 php artisan test --coverage
 ```
 
-### Jalankan Test untuk File Spesifik
+### Test File Spesifik
 
 ```bash
 php artisan test tests/Feature/ProjectTest.php
@@ -470,55 +435,43 @@ php artisan test tests/Feature/ProjectTest.php
 
 ## 🐛 Troubleshooting
 
-### 1. Database Connection Error
+### Database Connection Error
 
-**Masalah**: `SQLSTATE[HY000] [2002] No such file or directory`
+**Error**: `SQLSTATE[HY000] [2002] No such file or directory`
 
 **Solusi:**
 
 ```bash
-# Pastikan MySQL service sudah berjalan
-# Windows: MySQL service di Services
-# macOS: brew services start mysql
-# Linux: sudo systemctl start mysql
-
-# Cek konfigurasi .env
-DB_HOST=127.0.0.1      # atau localhost
+# Pastikan MySQL running
+# Edit .env dengan konfigurasi yang benar
+DB_HOST=127.0.0.1
+DB_DATABASE=gawebang_project
 DB_USERNAME=root
-DB_PASSWORD=           # kosong jika default
+DB_PASSWORD=
 
-# Buat database jika belum ada
-# Di phpMyAdmin atau MySQL CLI:
-# CREATE DATABASE gawebang_project;
-
-# Jalankan migration ulang
-php artisan migrate:fresh
+# Jalankan migrate
+php artisan migrate
 ```
 
-### 2. Permission Denied Error
+### Permission Denied Error
 
-**Masalah**: `The stream or file "/storage/logs/..." could not be opened`
+**Error**: `storage/logs/` atau `bootstrap/cache` permission denied
 
 **Solusi:**
 
 ```bash
-# Set permission untuk storage dan bootstrap/cache
 chmod -R 775 storage bootstrap/cache
 chmod -R 775 public/storage
-
-# Windows (jika menggunakan Git Bash):
-# Jalankan Command Prompt sebagai Administrator, kemudian:
-# Tidak perlu chmod di Windows, permission sudah handled
 ```
 
-### 3. Assets Not Loading (Blank Page)
+### Assets Not Loading
 
-**Masalah**: Stylesheet dan JavaScript tidak ter-load
+**Error**: CSS/JS tidak ter-load, halaman kosong
 
 **Solusi:**
 
 ```bash
-# Rebuild frontend assets
+# Rebuild assets
 npm run build
 
 # Clear Laravel cache
@@ -526,62 +479,37 @@ php artisan cache:clear
 php artisan config:clear
 php artisan route:clear
 php artisan view:clear
-
-# Restart Laravel server
-php artisan serve
 ```
 
-### 4. Composer Autoload Issues
+### Composer Issues
 
-**Masalah**: `Call to undefined function` atau `Class not found`
+**Error**: `Call to undefined class` atau autoload error
 
 **Solusi:**
 
 ```bash
-# Regenerate autoload files
 composer dump-autoload
-
-# Optimize for production
-php artisan optimize
-php artisan optimize:clear  # jika perlu reset
-```
-
-### 5. npm Module Not Found
-
-**Masalah**: `Cannot find module 'vite'` atau npm errors
-
-**Solusi:**
-
-```bash
-# Clear npm cache
-npm cache clean --force
-
-# Reinstall dependencies
-rm -rf node_modules package-lock.json
-npm install
-
-# Jalankan dev server
-npm run dev
+php artisan optimize:clear
 ```
 
 ---
 
 ## 🤝 Kontribusi
 
-Kami menerima kontribusi untuk improve project ini! Berikut caranya:
+Kami menerima kontribusi untuk improve project! Caranya:
 
-1. **Fork** repository
-2. **Buat branch** feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** ke branch (`git push origin feature/AmazingFeature`)
-5. **Open Pull Request** dengan deskripsi yang jelas
+1. **Fork** repository ini
+2. **Buat branch** feature (`git checkout -b feature/YourFeature`)
+3. **Commit** changes (`git commit -m 'Add YourFeature'`)
+4. **Push** ke branch (`git push origin feature/YourFeature`)
+5. **Open Pull Request** dengan deskripsi clear
 
-**Guidelines:**
+**Code Standards:**
 
-- Pastikan code mengikuti PSR-12 standard
-- Tulis unit test untuk fitur baru
-- Update dokumentasi jika ada perubahan API
-- Jelaskan perubahan Anda dalam PR description
+- Ikuti PSR-12 PHP standard
+- Write unit tests untuk fitur baru
+- Update dokumentasi
+- Jelaskan perubahan di PR description
 
 ---
 
@@ -593,42 +521,27 @@ Project ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE
 
 ## 👨‍💻 Author & Credits
 
-**Gawebang Project** dikembangkan oleh tim development.
+**Gawebang Project** dikembangkan sebagai platform marketplace freelance.
 
-### Acknowledgments & Credits
+### Acknowledgments
 
 Terima kasih kepada:
 
-- [Laravel](https://laravel.com) - Web application framework terbaik
+- [Laravel](https://laravel.com) - Web framework PHP terbaik
 - [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
-- [Alpine.js](https://alpinejs.dev) - Lightweight JavaScript framework
-- [Spatie](https://spatie.be) - Laravel Permission & tools berkualitas tinggi
+- [Alpine.js](https://alpinejs.dev) - Lightweight JavaScript library
+- [Spatie](https://spatie.be) - Laravel tools & packages
 - [Vite](https://vitejs.dev) - Next generation frontend tooling
 
 ---
 
-## 📞 Kontak & Support
+## 📞 Support & Contact
 
-Untuk pertanyaan, bug report, atau suggestions:
+Untuk pertanyaan atau bug report:
 
-- 📧 **Email**: support@gawebang.com
-- 🐛 **Issue Tracker**: [GitHub Issues](https://github.com/Alwi31/gawebang-project/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/Alwi31/gawebang-project/discussions)
-
----
-
-## 📅 Changelog
-
-### Version 1.0.0 (Initial Release)
-
-- ✅ User authentication & authorization
-- ✅ Project management system
-- ✅ Tools & technology management
-- ✅ Wallet & transaction system
-- ✅ Project applicant tracking
-- ✅ Role-based permission system
-- ✅ Database migrations & seeders
-- ✅ Responsive UI dengan Tailwind CSS
+- 📧 Email: support@gawebang.com
+- 🐛 Issues: [GitHub Issues](https://github.com/Alwi31/gawebang-project/issues)
+- 💬 Discussion: [GitHub Discussions](https://github.com/Alwi31/gawebang-project/discussions)
 
 ---
 
@@ -638,8 +551,8 @@ Untuk pertanyaan, bug report, atau suggestions:
 
 ![GitHub stars](https://img.shields.io/github/stars/Alwi31/gawebang-project)
 
-⭐ **Jika project ini bermanfaat, jangan lupa untuk star!** ⭐
+**Jika project ini bermanfaat, jangan lupa star! ⭐**
 
-[Kembali ke atas ⬆️](#gawebang-project-)
+[Kembali ke Atas ⬆️](#gawebang-project-)
 
 </div>
