@@ -1,0 +1,138 @@
+<x-app-layout>
+    <x-slot name="header">
+        <div class="flex flex-row justify-between items-center">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('My Wallet') }}
+            </h2>
+        </div>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 sm:p-8 lg:p-10">
+                <!-- Balance Section -->
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 sm:gap-8">
+                    <!-- Balance Info -->
+                    <div class="flex flex-row gap-4 items-center">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+                            <path opacity="0.4"
+                                d="M19 10.2798V17.4298C18.97 20.2798 18.19 20.9998 15.22 20.9998H5.78003C2.76003 20.9998 2 20.2498 2 17.2698V10.2798C2 7.5798 2.63 6.7098 5 6.5698C5.24 6.5598 5.50003 6.5498 5.78003 6.5498H15.22C18.24 6.5498 19 7.2998 19 10.2798Z"
+                                fill="#292D32" />
+                            <path
+                                d="M22 6.73V13.72C22 16.42 21.37 17.29 19 17.43V10.28C19 7.3 18.24 6.55 15.22 6.55H5.78003C5.50003 6.55 5.24 6.56 5 6.57C5.03 3.72 5.81003 3 8.78003 3H18.22C21.24 3 22 3.75 22 6.73Z"
+                                fill="#292D32" />
+                            <path
+                                d="M6.96027 18.5601H5.24023C4.83023 18.5601 4.49023 18.2201 4.49023 17.8101C4.49023 17.4001 4.83023 17.0601 5.24023 17.0601H6.96027C7.37027 17.0601 7.71027 17.4001 7.71027 17.8101C7.71027 18.2201 7.38027 18.5601 6.96027 18.5601Z"
+                                fill="#292D32" />
+                            <path
+                                d="M12.5494 18.5601H9.10938C8.69938 18.5601 8.35938 18.2201 8.35938 17.8101C8.35938 17.4001 8.69938 17.0601 9.10938 17.0601H12.5494C12.9594 17.0601 13.2994 17.4001 13.2994 17.8101C13.2994 18.2201 12.9694 18.5601 12.5494 18.5601Z"
+                                fill="#292D32" />
+                            <path d="M19 11.8599H2V13.3599H19V11.8599Z" fill="#292D32" />
+                        </svg>
+                        <div>
+                            <p class="text-slate-500 text-sm font-medium">Total Balance</p>
+                            <h3 class="text-indigo-950 text-2xl sm:text-xl lg:text-2xl font-bold mt-1">Rp
+                                {{ number_format(Auth::user()->wallet->balance, 0, ',', '.') }}
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                        <a href="{{ route('dashboard.wallet.withdraw') }}"
+                            class="font-bold py-3 px-6 bg-indigo-700 text-white rounded-full text-center text-sm sm:text-base hover:bg-indigo-800 transition-colors w-full sm:w-auto">
+                            Request Withdraw
+                        </a>
+
+                        @can('topup wallet')
+                            <a href="{{ route('dashboard.wallet.topup') }}"
+                                class="font-bold py-3 px-6 bg-green-700 text-white rounded-full text-center text-sm sm:text-base hover:bg-green-800 transition-colors w-full sm:w-auto">
+                                Topup Wallet
+                            </a>
+                        @endcan
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-8">
+
+                <!-- Transactions Section -->
+                <div>
+                    <h3 class="text-indigo-950 text-xl font-bold mb-6">Latest Transactions</h3>
+
+                    @forelse($wallet_transaction as $transaction)
+                        <!-- Transaction Item -->
+                        <div
+                            class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 p-4 sm:p-5 border border-slate-200 rounded-lg mb-4 hover:bg-slate-50 transition-colors">
+                            <!-- Amount Info -->
+                            <div class="flex flex-row gap-4 items-center flex-1">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+                                    <path opacity="0.4"
+                                        d="M19 10.2798V17.4298C18.97 20.2798 18.19 20.9998 15.22 20.9998H5.78003C2.76003 20.9998 2 20.2498 2 17.2698V10.2798C2 7.5798 2.63 6.7098 5 6.5698C5.24 6.5598 5.50003 6.5498 5.78003 6.5498H15.22C18.24 6.5498 19 7.2998 19 10.2798Z"
+                                        fill="#292D32" />
+                                    <path
+                                        d="M22 6.73V13.72C22 16.42 21.37 17.29 19 17.43V10.28C19 7.3 18.24 6.55 15.22 6.55H5.78003C5.50003 6.55 5.24 6.56 5 6.57C5.03 3.72 5.81003 3 8.78003 3H18.22C21.24 3 22 3.75 22 6.73Z"
+                                        fill="#292D32" />
+                                    <path
+                                        d="M6.96027 18.5601H5.24023C4.83023 18.5601 4.49023 18.2201 4.49023 17.8101C4.49023 17.4001 4.83023 17.0601 5.24023 17.0601H6.96027C7.37027 17.0601 7.71027 17.4001 7.71027 17.8101C7.71027 18.2201 7.38027 18.5601 6.96027 18.5601Z"
+                                        fill="#292D32" />
+                                    <path
+                                        d="M12.5494 18.5601H9.10938C8.69938 18.5601 8.35938 18.2201 8.35938 17.8101C8.35938 17.4001 8.69938 17.0601 9.10938 17.0601H12.5494C12.9594 17.0601 13.2994 17.4001 13.2994 17.8101C13.2994 18.2201 12.9694 18.5601 12.5494 18.5601Z"
+                                        fill="#292D32" />
+                                    <path d="M19 11.8599H2V13.3599H19V11.8599Z" fill="#292D32" />
+                                </svg>
+                                <div>
+                                    <p class="text-slate-500 text-xs sm:text-sm font-medium">Total Amount</p>
+                                    <h3 class="text-indigo-950 text-lg sm:text-xl font-bold mt-1">
+                                        Rp {{ number_format($transaction->amount, 0, ',', '.') }}
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <!-- Type -->
+                            <div class="flex-1 min-w-max">
+                                <p class="text-slate-500 text-xs sm:text-sm font-medium">Type</p>
+                                <h3 class="text-indigo-950 text-base sm:text-lg font-bold mt-1">{{ $transaction->type }}
+                                </h3>
+                            </div>
+
+                            <!-- Status Badge -->
+                            <div class="flex-1 min-w-max">
+                                @if ($transaction->is_paid)
+                                    <span
+                                        class="inline-block text-xs sm:text-sm font-bold py-2 px-4 rounded-full bg-green-500 text-white">
+                                        SUCCESS
+                                    </span>
+                                @else
+                                    <span
+                                        class="inline-block text-xs sm:text-sm font-bold py-2 px-4 rounded-full bg-orange-500 text-white">
+                                        PENDING
+                                    </span>
+                                @endif
+                            </div>
+
+                            <!-- Date -->
+                            <div class="flex-1 min-w-max">
+                                <p class="text-slate-500 text-xs sm:text-sm font-medium">Date</p>
+                                <h3 class="text-indigo-950 text-base sm:text-lg font-bold mt-1">
+                                    {{ $transaction->created_at->format('M d, Y') }}
+                                </h3>
+                            </div>
+                        </div>
+                    @empty
+                        <div class="text-center py-12">
+                            <p class="text-slate-500 text-base">Belum ada data transaksi.</p>
+                        </div>
+                    @endforelse
+
+                    <!-- Pagination -->
+                    <div class="mt-8">
+                        {{ $wallet_transaction->links() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>
