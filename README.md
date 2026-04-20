@@ -115,7 +115,7 @@ Sebelum memulai, pastikan sistem Anda sudah memiliki:
 ### Step 1: Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/Alwi31/gawebang-project.git>
 cd gawebang-project
 ```
 
