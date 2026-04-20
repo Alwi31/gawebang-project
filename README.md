@@ -1,4 +1,6 @@
-# Gawebang Project 🚀
+<div align=center>
+    <b>Gawebang Project 🚀</b>
+</div>
 
 <div align="center">
 
