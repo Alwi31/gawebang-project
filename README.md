@@ -362,28 +362,6 @@ _Profil user dengan informasi personal dan rating_
 
 ---
 
-### 📸 Cara Menambahkan Screenshot
-
-1. **Ambil screenshot** dari aplikasi Anda
-2. **Simpan ke folder**: `docs/images/`
-3. **Gunakan nama file** yang deskriptif (gunakan lowercase, hyphen-separated)
-4. **Update README** dengan path lokal seperti contoh di atas
-
-**Rekomendasi:**
-
-- Ukuran: 1200x600px atau 800x600px
-- Format: PNG atau JPG
-- File size: < 500KB per image
-- Contoh nama: `dashboard.png`, `project.png`, `bidding.png`
-
-**Tools untuk capture screenshot:**
-
-- Windows: ShareX (gratis), Snagit, Print Screen + Paint
-- Mac: Screenshot built-in, Snagit
-- Online: Placeholder images dari placeholder.com
-
----
-
 ## � Fitur & Improvement Rencana
 
 ### Current Features ✅
